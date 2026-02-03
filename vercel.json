@@ -1,7 +1,8 @@
 {
   "buildCommand": "CI=false npm run build",
   "env": {
-    "CI": "false"
+    "CI": "false",
+    "REACT_APP_API_URL": "https://paulinho-back.vercel.app/api"
   },
   "public": true
 }
