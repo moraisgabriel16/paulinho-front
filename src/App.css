@@ -572,6 +572,23 @@ body {
    RESPONSIVE DESIGN
    ============================================ */
 
+/* Tablets - 1024px and below */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Tablets/Small screens - 768px and below */
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -599,5 +616,98 @@ body {
   .info-box {
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  /* Reduce button/input sizes */
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Make forms full width */
+  .form-group {
+    width: 100%;
+  }
+}
+
+/* Small phones - 480px and below */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .stats-card {
+    padding: 1rem;
+  }
+
+  .stats-card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .stats-card-value {
+    font-size: 1.25rem;
+  }
+
+  .stats-card-label {
+    font-size: 0.75rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.875rem;
+  }
+
+  .dashboard-content {
+    padding: 1.5rem 0.75rem;
+  }
+
+  /* Make tables scrollable on small screens */
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-content th,
+  .table-content td {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .info-box {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    width: 100%;
+  }
+
+  /* Form inputs */
+  input,
+  textarea,
+  select {
+    padding: 0.75rem;
+    font-size: 16px;
+  }
+
+  /* Modals - make fullscreen on small screens */
+  .modal {
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }

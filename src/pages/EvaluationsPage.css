@@ -528,30 +528,56 @@
 }
 
 @media (max-width: 768px) {
+  .evaluations-content {
+    padding: 1.5rem;
+  }
+
   .evaluations-header {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
   }
 
   .evaluations-title {
     font-size: 1.75rem;
+    margin-bottom: 0;
   }
 
   .add-evaluation-btn {
     width: 100%;
     justify-content: center;
+    padding: 0.65rem 1.25rem;
   }
 
   .evaluation-form-card {
     padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem;
+    font-size: 1rem;
   }
 
   .form-actions {
     flex-direction: column;
+    gap: 0.75rem;
   }
 
   .form-btn {
     width: 100%;
+    padding: 0.65rem;
     justify-content: center;
   }
 
@@ -559,39 +585,19 @@
     padding: 1.5rem;
   }
 
+  .card-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
   .card-header h3 {
     font-size: 1.125rem;
+    margin-bottom: 0;
   }
 
   .evaluation-criteria-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .evaluations-content {
-    padding: 1rem 0.75rem;
-  }
-
-  .evaluations-title {
-    font-size: 1.5rem;
-  }
-
-  .add-evaluation-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-  }
-
-  .evaluation-form-card {
-    padding: 1rem;
-  }
-
-  .evaluation-history-card {
-    padding: 1rem;
-  }
-
-  .card-header h3 {
-    font-size: 1rem;
+    gap: 1rem;
   }
 
   .criteria-grid {
@@ -599,15 +605,156 @@
     gap: 1.5rem;
   }
 
-  .evaluation-criteria-grid {
-    grid-template-columns: 1fr;
+  /* Hide less important info on tablet */
+  .evaluation-date-secondary {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .evaluations-container {
+    min-height: 100vh;
+  }
+
+  .evaluations-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .evaluations-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .add-evaluation-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .add-evaluation-btn span {
+    font-size: 0.9rem;
+  }
+
+  .evaluation-form-card {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.65rem;
+    font-size: 16px;
+    border-radius: 0.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-btn {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+  }
+
+  .evaluation-history-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .evaluation-criteria-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .criteria-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .students-evaluation-list {
+    max-height: 400px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Slider styling for mobile */
+  .slider-container {
+    padding: 0.75rem;
+  }
+
+  .slider-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+  }
+
+  /* Evaluation item styling */
+  .evaluation-item {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.5rem;
+  }
+
+  .evaluation-item-header {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .evaluation-item-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .evaluation-item-date {
+    font-size: 0.75rem;
+  }
+
+  .evaluation-item-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .evaluation-item-btn {
+    padding: 0.375rem 0.5rem;
+    font-size: 0.7rem;
+    width: 100%;
+  }
+}
     grid-template-columns: 1fr;
   }
 }
